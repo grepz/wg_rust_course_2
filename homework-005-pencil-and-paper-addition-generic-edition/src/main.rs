@@ -42,29 +42,6 @@ impl SmartPencilAdd<i128> for ListNode<i128> {
     }
 }
 
-
-
-// impl SmartPencilAdd<i128> for ListNode<i128> {
-// }
-
-
-// impl From<ListNode<i8>> for ListNode<i16> {
-//     fn from(node: ListNode<i8>) -> ListNode<i16> {
-//         let mut head_node  = ListNode{
-//             val: node.val as i16,
-//             next: None
-//         };
-//         let mut ptr = &mut head_node.next;
-//         let mut current = node.next;
-//         while let Some(node) = current {
-//             *ptr = Some(ListNode::box_new(node.val as i16));
-//             ptr = &mut (*ptr).as_mut().unwrap().next;
-//             current = node.next;
-//         }
-//         head_node
-//     }
-// }
-
 impl<T> ListNode<T> where
     T: From<i8> +
     Add<Output = T> + Sub<Output = T> + PartialOrd +
@@ -203,11 +180,6 @@ fn main() {
 
     one.pencil_addition(two, 9, 10);
     dbg!(one);
-
-    // let slice_one: &[i8] = &[5, 4, 3, 2, 1];
-    // let test = from_slice(slice_one);
-    // let test_i16: ListNode<i16> = test.unwrap().into();
-    // println!("==> {:?}", test_i16);
 }
 
 #[cfg(test)]
