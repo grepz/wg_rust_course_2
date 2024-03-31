@@ -1,0 +1,7 @@
+blank_lines_upper_bound = 1
+edition = "2021"
+format_strings = true
+group_imports = "StdExternalCrate"
+imports_granularity = "One"
+newline_style = "Unix"
+reorder_impl_items = true

@@ -1,0 +1,1 @@
+There isn't a solution with only one iteration in safe Rust. You should count the middle and then unwrap by the counter.
